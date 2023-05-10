@@ -1,6 +1,6 @@
 {
   "name": "ember-upstream",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Video.js component for Ember, for streaming M3U8 (HLS) file type.",
   "keywords": [
     "ember-addon"
