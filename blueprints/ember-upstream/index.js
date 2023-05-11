@@ -8,20 +8,13 @@ module.exports = {
 
   afterInstall() {
 
-    return this.addAddonsToProject({
-      //Ember packages
-      
-      packages: [],
-
-    }).then(() => {
+    return this.addPackagesToProject([
       //NPM packages
 
-      return this.addPackagesToProject([
-        { name: 'video.js' },
-        { name: '@videojs/http-streaming' },
-      ]);
+      { name: 'video.js' },
+      { name: '@videojs/http-streaming' },
 
-    }).then(() => {
+    ]).then(() => {
       //SCSS
 
       let dependencies = this.project.dependencies();
@@ -49,7 +42,6 @@ module.exports = {
           this.ui.writeLine(`Created ${file}`);
         }
       }
-
     });
   },
 };
