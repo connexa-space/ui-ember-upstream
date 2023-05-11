@@ -2,6 +2,7 @@ import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { service } from '@ember/service';
+import videojs from 'video.js';
 
 export default class UpstreamPlayerComponent extends Component {
   @tracked playing = this.args.autoplay ?? false;

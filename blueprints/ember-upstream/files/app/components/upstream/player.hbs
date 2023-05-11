@@ -1,4 +1,4 @@
-<video-js poster={{@posterURL}} class="vjs-theme-city video-player" id={{@id}} playsinline crossorigin>
+<video-js poster={{@posterURL}} class="vjs-theme-city video-player {{@class}}" id={{@id}} style={{@style}} playsinline crossorigin>
 	<source src={{@streamingURL}} type="application/x-mpegURL" />
 	{{yield}}
 </video-js>
@@ -6,21 +6,21 @@
 <img src="/assets/img/pixel-onload.png" alt="pixel-loader" {{on "load" this.loadM3U8}} class="d-none">
 
 {{#if @controls}}
-	<div class="position-absolute text-uppercase p-5 d-flex align-items-end justify-content-end bottom-0 end-0" style="z-index:1">
-	  <div class="d-flex">
-	  	<span class="text-white fs-3 mx-2" {{on 'click' this.restart}}>Click to restart</span>
+	<div class="position-absolute text-lowercase p-2 d-flex top-0 end-0 d-flex align-items-start justify-content-end text-end w-100" style="z-index:1">
 
 	  	{{#if this.playing}}
-	    	<span class="text-white fs-3 mx-2" {{on 'click' this.playPause}}>Click to pause</span>
+	    	<div class="text-white small fw-bolder mx-1" {{on 'click' this.playPause}}>&lt;pause&gt;</div>
 	    {{else}}
-	    	<span class="text-white fs-3 mx-2" {{on 'click' this.playPause}}>Click to play</span>
+	    	<div class="text-white small fw-bolder mx-1" {{on 'click' this.playPause}}>&lt;play&gt;</div>
 	    {{/if}}
 
 	    {{#if this.muted}}
-		    <span class="text-white fs-3 mx-2" {{on 'click' this.muteUnmute}}>Click to unmute</span>
-			{{else}}
-				<span class="text-white fs-3 mx-2" {{on 'click' this.muteUnmute}}>Click to mute</span>
-			{{/if}}
-	  </div>
+		    <div class="text-white small fw-bolder mx-1" {{on 'click' this.muteUnmute}}>&lt;unmute&gt;</div>
+		{{else}}
+			<div class="text-white small fw-bolder mx-1" {{on 'click' this.muteUnmute}}>&lt;mute&gt;</div>
+		{{/if}}
+
+	  	<div class="text-white small fw-bolder mx-1" {{on 'click' this.restart}}>&lt;restart&gt;</div>
+
 	</div>
 {{/if}}
