@@ -1,6 +1,6 @@
 {
   "name": "ember-upstream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Video.js component for Ember, for streaming M3U8 (HLS) file type.",
   "keywords": [
     "ember-addon"
@@ -52,7 +52,7 @@
     "ember-page-title": "^7.0.0",
     "ember-qunit": "^6.2.0",
     "ember-resolver": "^10.0.0",
-    "ember-source": "~4.12.0",
+    "ember-source": "^5.0.0",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^5.7.2",
     "ember-try": "^2.0.0",
@@ -72,7 +72,7 @@
     "webpack": "^5.78.0"
   },
   "peerDependencies": {
-    "ember-source": "^4.0.0"
+    "ember-source": "^5.0.0"
   },
   "engines": {
     "node": "14.* || 16.* || >= 18"
